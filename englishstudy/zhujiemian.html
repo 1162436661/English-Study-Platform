@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<!--这个主界面做的比较详细，也很用心，我尽量多写注释，表明我每一步怎么做的，但是我是一个很懒得人，
+    以后注释会越写越少，但是pan和希宸不要学我的坏毛病，你们才开始开发要养成写注释的习惯，方便以后维护，
+    不然三个月后你们自己都看不懂自己写了什么代码-->
+<head>
+    <!--下面分别是字体编码，和作者名字缩写以及界面标题-->
+    <meta charset="UTF-8">
+    <meta name="zjn,chp,zxc" content="英语学习平台主界面">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>英语学习平台</title>
+    <!--下面是css链接，我觉得所有关联页面都用同样的样式，所以使用了外部样式表，
+        单独一页的话，比如希宸的登录，用户信息和退出这两个要有超链接，分别链接到用户信息页面和
+        重新登录界面，注册界面可以用内部样式表，最后pan一定记得写注释，我还没有检查你的代码质量-->
+    <link rel="stylesheet" type="text\css" href="zhujiemian.css">
+    
+
+    <!--下面是一段javascript代码，用来固定页眉页脚的-->
+    <!--    
+    <script>
+        $(function(){
+        function footerPosition(){
+            $("footer").removeClass("fixed-bottom");
+            var contentHeight = document.body.scrollHeight,//网页正文全文高度
+                winHeight = window.innerHeight;//可视窗口高度，不包括浏览器顶部工具栏
+            if(!(contentHeight > winHeight)){
+                //当网页正文高度小于可视窗口高度时，为footer添加类fixed-bottom
+                $("footer").addClass("fixed-bottom");
+            } else {
+                $("footer").removeClass("fixed-bottom");
+            }
+        }
+        footerPosition();
+        $(window).resize(footerPosition);
+        });
+    </script>
+    -->
+
+</head>
+<body>
+    <!--下面代码是有关页眉的代码，有背景，颜色，账号状态，登出 ,使用class选择器方便在css设置-->
+        <header class="header1">
+                <h1 align="center">民航专业英语在线智能学习平台</h1>
+                <table align="right" >
+                    <td>
+                        <input type="submit" value="用户信息" name="submit">
+                    </td>
+                    <td>
+                        <input type="submit" value="登出" name="submit">
+                    </td>
+                </table>
+        </header>
+
+    <!--下面代码是页面主要部分，一共分为四块，句子测试、单词测试、单元测试、写作测试。
+        这四块分别超链接到四个子版块四个子版块为具体测试内容，因为整个主界面内容只有这个四块，
+        这四块要求布局好看，单独的背景和颜色安排-->
+        <main class="main1">
+                <div>
+                    <input type="submit" value="句子测试" name="submit" ><tton>
+                    <input type="submit" value="单词测试" name="submit" style="float:right"><tton>
+                </div>
+                <div line-height=1.5;>
+                    <input type="submit" value="单元测试" name="submit" style="float:left"><tton>
+                    <input type="submit" value="写作测试" name="submit" style="float:right"><tton>
+                </div>
+        </main>
+
+    <!--下面是页脚的代码，包括背景，颜色，作者（我们几个名字），还有学校地址，邮编等等乱七八糟的东西，
+    使用class选择器方便在css设置-->
+    <footer class="footer1">
+        <p>
+            学校：四川西南航空职业学院</br>
+            作者：倪贤祥，张嘉楠，陈红潘，周希宸，英语教研室，艺术学院等</br>
+            地址:四川省成都市金堂县学府大道996号</br>
+            邮编：610400</br>
+            版权信息：版权属四川西南航空职业学院所有，未经授权任何单位和个人不得使用</br>
+        </p>
+    </footer>
+
+</body>
+</html>
