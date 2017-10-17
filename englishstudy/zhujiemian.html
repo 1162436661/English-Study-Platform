@@ -14,42 +14,17 @@
         单独一页的话，比如希宸的登录，用户信息和退出这两个要有超链接，分别链接到用户信息页面和
         重新登录界面，注册界面可以用内部样式表，最后pan一定记得写注释，我还没有检查你的代码质量-->
     <link rel="stylesheet" type="text\css" href="/css/zhujiemian.css">
-    
-
-    <!--下面是一段javascript代码，用来固定页眉页脚的-->
-    <!--    
-    <script>
-        $(function(){
-        function footerPosition(){
-            $("footer").removeClass("fixed-bottom");
-            var contentHeight = document.body.scrollHeight,//网页正文全文高度
-                winHeight = window.innerHeight;//可视窗口高度，不包括浏览器顶部工具栏
-            if(!(contentHeight > winHeight)){
-                //当网页正文高度小于可视窗口高度时，为footer添加类fixed-bottom
-                $("footer").addClass("fixed-bottom");
-            } else {
-                $("footer").removeClass("fixed-bottom");
-            }
-        }
-        footerPosition();
-        $(window).resize(footerPosition);
-        });
-    </script>
-    -->
 
 </head>
 <body>
     <!--下面代码是有关页眉的代码，有背景，颜色，账号状态，登出 ,使用class选择器方便在css设置-->
         <header class="header1">
                 <h1 align="center">民航专业英语在线智能学习平台</h1>
-                <table>
-                    <td>
-                        <input type="submit" value="用户信息" name="submit">
-                    </td>
-                    <td>
-                        <input type="submit" value="登出" name="submit">
-                    </td>
-                </table>
+                <div>
+                    <script></script>
+                    <a href="../youhuxinxi.html" id="youhuxinxi">用户信息</a>
+                    <a href="login.html" id="login">退出</a>
+                </div>
         </header>
 
     <!--下面代码是页面主要部分，一共分为四块，句子测试、单词测试、单元测试、写作测试。
@@ -57,12 +32,27 @@
         这四块要求布局好看，单独的背景和颜色安排-->
         <main class="main1">
                 <div>
-                    <input type="submit" value="句子测试" name="submit" ><tton>
-                    <input type="submit" value="单词测试" name="submit" style="float:right"><tton>
+                    <a href="../danciceshi/danciceshi001.html">
+                    <img src="../picture/Tulips.jpg" alt="单词测试" />
+                    </a>
                 </div>
-                <div line-height=1.5;>
-                    <input type="submit" value="单元测试" name="submit" style="float:left"><tton>
-                    <input type="submit" value="写作测试" name="submit" style="float:right"><tton>
+
+                <div>
+                    <a href="../juziceshi/juziceshi001.html">
+                    <img src="../picture/Chrysanthemum.jpg" alt="句子测试" />
+                    </a>
+                </div>
+
+                <div>
+                    <a href="../danyuanceshi/danyuanceshi.html">
+                    <img src="../picture/Desert.jpg" alt="单元测试" />
+                    </a>
+                </div>
+
+                <div>
+                    <a href="../juziceshi/juziceshi.html">
+                    <img src="../picture/Hydrangeas.jpg" alt="写作测试" />
+                    </a>
                 </div>
         </main>
 
